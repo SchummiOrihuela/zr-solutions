@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zrsolutions.mx/sitemap.xml
