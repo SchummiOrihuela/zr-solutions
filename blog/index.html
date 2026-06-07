@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog ZR Solutions | Guías de Limpieza y Mantenimiento Empresarial</title>
+<meta name="description" content="Blog de ZR Solutions: 20 guías profesionales sobre limpieza empresarial, mantenimiento de instalaciones, seguridad electrónica y más para empresas en México."/>
+<link rel="canonical" href="https://zrsolutions.mx/blog/"/>
+<meta property="og:title" content="Blog ZR Solutions | Guías Profesionales"/>
+<meta property="og:description" content="20 artículos y guías profesionales sobre limpieza, mantenimiento, seguridad y más para empresas en México."/>
+<meta property="og:image" content="https://zrsolutions.mx/img/og-image.png"/>
+<meta property="og:url" content="https://zrsolutions.mx/blog/"/>
+<meta property="og:type" content="website"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+
+    :root{
+      --bg:#0a0e1a;--bg2:#0f1525;--bg3:#161e30;
+      --card:#131b2e;--card2:#1a2440;
+      --border:rgba(255,255,255,0.07);--border2:rgba(45,190,90,0.18);
+      --navy:#1B3A5C;--green:#2dbe5a;--green2:#1fa048;--green3:#0d7a34;
+      --teal:#0ea5e9;--accent:#7dd9a0;
+      --white:#ffffff;--text:#e8edf5;--muted:#8494ae;--muted2:#5d6e8a;
+      --shadow-sm:0 2px 12px rgba(0,0,0,0.3);
+      --shadow:0 8px 40px rgba(0,0,0,0.45);
+      --shadow-lg:0 20px 60px rgba(0,0,0,0.55);
+      --glow:0 0 40px rgba(45,190,90,0.12);
+      --radius-sm:10px;--radius:18px;--radius-lg:28px;
+      --transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    [data-theme="light"]{
+      --bg:#f2f5fa;--bg2:#ffffff;--bg3:#e8eef7;
+      --card:#ffffff;--card2:#f0f5ff;
+      --border:rgba(0,0,0,0.07);--border2:rgba(45,190,90,0.25);
+      --text:#1a2235;--muted:#5d6e8a;--muted2:#8494ae;
+      --shadow-sm:0 2px 12px rgba(27,58,92,0.08);
+      --shadow:0 8px 40px rgba(27,58,92,0.12);
+      --shadow-lg:0 20px 60px rgba(27,58,92,0.18);
+      --glow:0 0 40px rgba(45,190,90,0.08);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Poppins',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden;transition:background 0.35s,color 0.35s}
+    img{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    button{cursor:pointer;border:none;background:none;font:inherit}
+
+    /* TOPBAR */
+    #topbar{background:linear-gradient(90deg,var(--green3),var(--green2),var(--teal));color:#fff;text-align:center;font-size:0.78rem;font-weight:600;letter-spacing:0.5px;padding:0.55rem 1rem;font-family:'Montserrat',sans-serif}
+    #topbar a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+    #topbar .tb-inner{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+    #topbar i{font-size:0.7rem;margin-right:4px}
+
+    /* NAV */
+    #navbar{position:sticky;top:0;left:0;width:100%;z-index:1000;background:rgba(10,14,26,0.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;transition:var(--transition)}
+    [data-theme="light"] #navbar{background:rgba(255,255,255,0.92)}
+    #navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.25)}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .nav-logo img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--green);box-shadow:0 0 14px rgba(45,190,90,0.3);transition:var(--transition)}
+    .nav-logo:hover img{box-shadow:0 0 24px rgba(45,190,90,0.5)}
+    .nav-brand{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;color:var(--white);line-height:1.1}
+    [data-theme="light"] .nav-brand{color:#0a0e1a}
+    .nav-brand span{color:var(--green)}
+    .nav-tagline{font-size:0.58rem;color:var(--muted);letter-spacing:0.8px;text-transform:uppercase;margin-top:1px}
+    .nav-links{display:flex;gap:1.8rem;align-items:center}
+    .nav-links a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:0.78rem;color:var(--muted);letter-spacing:0.4px;padding:4px 0;position:relative;transition:color 0.2s}
+    .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--green);border-radius:2px;transition:width 0.25s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+    .nav-actions{display:flex;align-items:center;gap:8px}
+    .btn-theme{width:36px;height:36px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:0.88rem;transition:var(--transition)}
+    .btn-theme:hover{color:var(--green);border-color:var(--border2)}
+    .btn-nav-cta{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;padding:0.5rem 1.3rem;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.78rem;box-shadow:0 4px 16px rgba(45,190,90,0.3);transition:var(--transition)}
+    .btn-nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(45,190,90,0.5)}
+    .btn-hamburger{display:none;font-size:1.3rem;color:var(--text);padding:4px}
+    #mobileNav{display:none;position:fixed;top:70px;left:0;width:100%;background:rgba(10,14,26,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:999;padding:1.2rem 5% 1.8rem;flex-direction:column;gap:0}
+    [data-theme="light"] #mobileNav{background:rgba(255,255,255,0.98)}
+    #mobileNav.open{display:flex}
+    #mobileNav a{display:block;padding:0.9rem 0;border-bottom:1px solid var(--border);font-family:'Montserrat',sans-serif;font-weight:600;font-size:0.9rem;color:var(--text);transition:color 0.2s}
+    #mobileNav a:last-child{border-bottom:none}
+    #mobileNav a:hover{color:var(--green)}
+    .mobile-cta{margin-top:1.2rem;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff!important;padding:0.9rem 1.5rem;border-radius:50px;text-align:center;font-weight:700!important}
+
+    /* FOOTER */
+    footer{background:#060b14;border-top:1px solid var(--border);padding:4rem 5% 2rem}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+    .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+    .footer-logo img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(45,190,90,0.3)}
+    .footer-brand{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.05rem;color:#fff}
+    .footer-brand span{color:var(--green)}
+    .footer-desc{font-size:0.81rem;color:var(--muted);line-height:1.7;max-width:280px;margin-top:0.5rem}
+    .footer-col h5{font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;font-size:0.79rem;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:1.1rem}
+    .footer-col li{margin-bottom:0.55rem}
+    .footer-col a{color:var(--muted);font-size:0.82rem;transition:color 0.2s;display:flex;align-items:center;gap:7px}
+    .footer-col a i{font-size:0.7rem;color:var(--green)}
+    .footer-col a:hover{color:var(--green)}
+    .footer-hr{border:none;border-top:1px solid var(--border)}
+    .footer-bottom{padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.73rem;color:rgba(255,255,255,0.28)}
+
+    /* WA FLOAT */
+    #wafab{position:fixed;bottom:1.8rem;right:1.8rem;z-index:9999}
+    #wabtn{width:62px;height:62px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:#fff;box-shadow:0 4px 28px rgba(37,211,102,0.55);animation:wa-pulse 2.8s infinite;transition:transform 0.2s}
+    @keyframes wa-pulse{0%,100%{box-shadow:0 4px 28px rgba(37,211,102,0.55)}50%{box-shadow:0 4px 40px rgba(37,211,102,0.8),0 0 0 12px rgba(37,211,102,0.09)}}
+    #wabtn:hover{transform:scale(1.1)}
+    #wamenu{display:none;position:absolute;bottom:74px;right:0;background:#111827;border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);min-width:310px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.6)}
+    #wamenu.open{display:block;animation:slideUp 0.22s ease}
+    @keyframes slideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .wa-head{background:linear-gradient(135deg,#25D366,#1aad55);padding:1rem 1.3rem}
+    .wa-head strong{font-family:'Montserrat',sans-serif;font-size:0.9rem;color:#fff;display:block}
+    .wa-head p{font-size:0.74rem;color:rgba(255,255,255,0.85);margin-top:2px}
+    .wa-opt{display:flex;align-items:center;gap:0.9rem;padding:0.85rem 1.3rem;border-bottom:1px solid rgba(255,255,255,0.06);text-decoration:none;color:#e2e8f0;transition:background 0.15s}
+    .wa-opt:last-child{border-bottom:none}
+    .wa-opt:hover{background:rgba(45,190,90,0.1)}
+    .wa-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .wi1{background:rgba(96,165,250,0.15);color:#60a5fa}
+    .wi2{background:rgba(239,68,68,0.15);color:#f87171}
+    .wi3{background:rgba(45,190,90,0.15);color:#4ade80}
+    .wi4{background:rgba(14,165,233,0.15);color:#38bdf8}
+    .wi5{background:rgba(168,85,247,0.15);color:#c084fc}
+    .wi6{background:rgba(251,191,36,0.15);color:#fbbf24}
+    .wi7{background:rgba(148,163,184,0.15);color:#94a3b8}
+    .wa-txt strong{display:block;font-size:0.85rem;font-family:'Montserrat',sans-serif;font-weight:700}
+    .wa-txt span{font-size:0.74rem;color:#94a3b8}
+
+    /* FADE UP */
+    .fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    /* SECTION */
+    section{padding:5rem 5%}
+    .section-label{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--green);background:rgba(45,190,90,0.08);border:1px solid rgba(45,190,90,0.2);padding:0.35rem 1rem;border-radius:50px;margin-bottom:1rem}
+    .section-title{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);line-height:1.1;letter-spacing:-0.5px}
+    [data-theme="light"] .section-title{color:var(--text)}
+
+    /* CTA */
+    .cta-wrap{background:linear-gradient(135deg,#0c1a30 0%,#091a10 100%);border:1px solid rgba(45,190,90,0.2);border-radius:var(--radius-lg);padding:5rem 3.5rem;text-align:center;position:relative;overflow:hidden;max-width:900px;margin:0 auto}
+    .cta-wrap::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(45,190,90,0.1),transparent 70%);pointer-events:none}
+    .cta-wrap h2{font-family:'Montserrat',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;margin-bottom:1rem;position:relative;z-index:1}
+    .cta-wrap p{font-size:1rem;color:rgba(255,255,255,0.6);max-width:500px;margin:0 auto 2.5rem;line-height:1.75;position:relative;z-index:1}
+    .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+    .btn-wa{background:linear-gradient(135deg,#25D366,#1aad55);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.92rem;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 22px rgba(37,211,102,0.4);transition:var(--transition)}
+    .btn-wa:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(37,211,102,0.6)}
+    .btn-tel{color:var(--text);padding:0.9rem 2.2rem;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.92rem;border:1.5px solid rgba(255,255,255,0.2);display:inline-flex;align-items:center;gap:8px;transition:var(--transition)}
+    .btn-tel:hover{border-color:var(--green);color:var(--green)}
+
+    /* RESPONSIVE */
+    @media(max-width:640px){
+      section{padding:4rem 5%}
+      .nav-links{display:none}
+      .btn-hamburger{display:block}
+      .btn-nav-cta{display:none}
+      .cta-wrap{padding:3rem 1.5rem}
+      .footer-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:900px){
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+
+/* ═══ BLOG HERO ═══ */
+.blog-hero{
+  background:linear-gradient(170deg,#060b16 0%,#0a0e1a 60%,#0d1a10 100%);
+  padding:6rem 5% 3.5rem;text-align:center;position:relative;overflow:hidden;
+}
+.blog-hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(45,190,90,0.08) 0%,transparent 70%);
+}
+.blog-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.blog-hero-inner h1{
+  font-family:'Montserrat',sans-serif;font-weight:900;
+  font-size:clamp(2.2rem,5vw,3.5rem);color:var(--white);
+  line-height:1.05;letter-spacing:-1px;margin:1rem 0;
+}
+.blog-hero-inner h1 em{
+  font-style:normal;color:transparent;
+  background:linear-gradient(135deg,var(--green),var(--teal));
+  -webkit-background-clip:text;background-clip:text;
+}
+.blog-hero-inner p{font-size:1rem;color:var(--muted);line-height:1.75;margin-top:0.8rem}
+.blog-stats{
+  display:flex;align-items:center;justify-content:center;gap:2rem;
+  margin-top:2rem;flex-wrap:wrap;
+}
+.blog-stat{
+  display:flex;align-items:center;gap:0.5rem;
+  font-family:'Montserrat',sans-serif;font-size:0.78rem;font-weight:700;color:var(--muted);
+}
+.blog-stat i{color:var(--green)}
+.blog-stat strong{color:var(--white)}
+
+/* ═══ TICKER ═══ */
+.ticker-wrap{
+  background:rgba(45,190,90,0.04);
+  border-top:1px solid var(--border2);
+  border-bottom:1px solid var(--border2);
+  overflow:hidden;padding:0.9rem 0;position:relative;
+}
+.ticker-wrap::before,.ticker-wrap::after{
+  content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;
+}
+.ticker-wrap::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.ticker-wrap::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.ticker-track{
+  display:flex;gap:0;width:max-content;
+  animation:ticker-scroll 40s linear infinite;
+}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes ticker-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  padding:0 2rem;white-space:nowrap;
+  font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;
+  color:var(--muted);text-decoration:none;transition:color 0.2s;
+  border-right:1px solid var(--border);
+}
+.ticker-item:hover{color:var(--green)}
+.ticker-item i{color:var(--green);font-size:0.8rem}
+
+/* ═══ FILTERS ═══ */
+.filters-wrap{
+  padding:2.5rem 5% 0;max-width:1200px;margin:0 auto;
+}
+.filters-label{
+  font-family:'Montserrat',sans-serif;font-size:0.7rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:2px;color:var(--muted);
+  margin-bottom:0.8rem;
+}
+.filters-row{
+  display:flex;gap:0.5rem;flex-wrap:wrap;
+}
+.filter-btn{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  padding:0.45rem 1rem;border-radius:50px;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.72rem;
+  background:var(--card);border:1px solid var(--border);color:var(--muted);
+  transition:var(--transition);cursor:pointer;
+}
+.filter-btn:hover{border-color:var(--border2);color:var(--text)}
+.filter-btn.active{
+  background:rgba(45,190,90,0.1);border-color:var(--green);color:var(--green);
+}
+.filter-count{
+  background:rgba(45,190,90,0.15);color:var(--green);
+  border-radius:50px;padding:0 0.4rem;font-size:0.65rem;
+}
+.filter-btn.active .filter-count{background:rgba(45,190,90,0.25)}
+
+/* ═══ BLOG GRID ═══ */
+.blog-section{padding:2rem 5% 5rem;max-width:1200px;margin:0 auto}
+.no-results{
+  display:none;text-align:center;padding:4rem;
+  font-family:'Montserrat',sans-serif;color:var(--muted);
+}
+.no-results i{font-size:2.5rem;color:var(--border);display:block;margin-bottom:1rem}
+.blog-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;margin-top:2rem;
+}
+.blog-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+  text-decoration:none;transition:var(--transition);
+  display:flex;flex-direction:column;
+}
+.blog-card:hover{
+  border-color:var(--border2);transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+.blog-card.hidden{display:none}
+.blog-card-header{
+  height:110px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;
+}
+.blog-card-header.wi1{background:rgba(96,165,250,0.08);color:#60a5fa}
+.blog-card-header.wi2{background:rgba(239,68,68,0.08);color:#f87171}
+.blog-card-header.wi3{background:rgba(45,190,90,0.08);color:#4ade80}
+.blog-card-header.wi4{background:rgba(14,165,233,0.08);color:#38bdf8}
+.blog-card-header.wi5{background:rgba(168,85,247,0.08);color:#c084fc}
+.blog-card-header.wi6{background:rgba(251,191,36,0.08);color:#fbbf24}
+.blog-card-header.wi7{background:rgba(148,163,184,0.08);color:#94a3b8}
+.blog-card-body{padding:1.4rem;flex:1;display:flex;flex-direction:column}
+.blog-cat{
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.65rem;
+  text-transform:uppercase;letter-spacing:2px;color:var(--green);display:block;margin-bottom:0.6rem;
+}
+.blog-card h2{
+  font-family:'Montserrat',sans-serif;font-weight:800;font-size:0.95rem;
+  color:var(--text);line-height:1.35;margin-bottom:0.6rem;
+}
+.blog-excerpt{
+  font-size:0.8rem;color:var(--muted);line-height:1.6;flex:1;margin-bottom:1.1rem;
+}
+.blog-card-footer{
+  display:flex;gap:1rem;font-size:0.72rem;color:var(--muted2);
+  border-top:1px solid var(--border);padding-top:0.8rem;margin-top:auto;
+}
+.blog-card-footer span{display:flex;align-items:center;gap:4px}
+.blog-card-footer i{color:var(--green);font-size:0.68rem}
+
+@media(max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .blog-grid{grid-template-columns:1fr}
+  .filters-row{gap:0.4rem}
+  .filter-btn{font-size:0.68rem;padding:0.4rem 0.8rem}
+}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div class="tb-inner">
+    <span><i class="fas fa-phone"></i>56 2649 9648</span>
+    <span><i class="fab fa-whatsapp"></i><a href="https://wa.me/525626499648" target="_blank">Cotiza vía WhatsApp</a></span>
+    <span><i class="fas fa-map-marker-alt"></i>CDMX · Edomex · Puebla · Querétaro</span>
+  </div>
+</div>
+<nav id="navbar">
+  <a class="nav-logo" href="/">
+    <img src="/img/logo.jpg" alt="ZR Solutions logo"/>
+    <div>
+      <div class="nav-brand">ZR <span>Solutions</span></div>
+      <div class="nav-tagline">Limpieza &amp; Mantenimiento</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#servicios">Servicios</a></li>
+    <li><a href="/#nosotros">Nosotros</a></li>
+    <li><a href="/#galeria">Proyectos</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contacto">Contacto</a></li>
+    
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-theme" onclick="toggleTheme()" id="themeBtn" title="Cambiar tema"><i class="fas fa-sun"></i></button>
+    <a href="https://wa.me/525626499648" class="btn-nav-cta" target="_blank"><i class="fab fa-whatsapp"></i> Cotizar</a>
+    <button class="btn-hamburger" onclick="toggleMobile()" aria-label="Menú"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div id="mobileNav">
+  <a href="/#servicios">Servicios</a>
+  <a href="/#nosotros">Nosotros</a>
+  <a href="/#galeria">Proyectos</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/blog/">Blog</a>
+  <a href="/#contacto">Contacto</a>
+  <a href="https://wa.me/525626499648" class="mobile-cta" target="_blank"><i class="fab fa-whatsapp"></i> Cotizar ahora</a>
+</div>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-inner fade-up">
+    <div class="section-label">Conocimiento profesional</div>
+    <h1>Blog <em>ZR Solutions</em></h1>
+    <p>Guías, checklist y recursos profesionales sobre limpieza, mantenimiento y seguridad para empresas en México.</p>
+    <div class="blog-stats">
+      <div class="blog-stat"><i class="fas fa-newspaper"></i><strong>20</strong> artículos</div>
+      <div class="blog-stat"><i class="fas fa-layer-group"></i><strong>14</strong> categorías</div>
+      <div class="blog-stat"><i class="fas fa-clock"></i>Actualizado <strong>2025</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track" id="tickerTrack">
+    <a href="/blog/limpieza-alfombras-oficina/" class="ticker-item"><i class="fas fa-couch"></i><span>Cómo limpiar alfombras de oficina profesionalmente</span></a><a href="/blog/mantenimiento-aire-acondicionado/" class="ticker-item"><i class="fas fa-snowflake"></i><span>Mantenimiento de aire acondicionado: cada cuánto y por qué importa</span></a><a href="/blog/camaras-seguridad-empresas/" class="ticker-item"><i class="fas fa-video"></i><span>Cámaras de seguridad para empresas: guía completa 2025</span></a><a href="/blog/limpieza-post-construccion/" class="ticker-item"><i class="fas fa-hard-hat"></i><span>Limpieza post-construcción: qué incluye y cómo cotizarla</span></a><a href="/blog/control-acceso-biometrico/" class="ticker-item"><i class="fas fa-fingerprint"></i><span>Control de acceso biométrico: cómo proteger tu empresa en 2025</span></a><a href="/blog/retardante-fuego-textiles/" class="ticker-item"><i class="fas fa-fire-extinguisher"></i><span>Retardante de fuego en textiles: normativa NOM y beneficios reales</span></a><a href="/blog/limpieza-cortinas-tapiceria/" class="ticker-item"><i class="fas fa-couch"></i><span>Limpieza de cortinas y tapicería en espacios comerciales</span></a><a href="/blog/jardineria-empresarial/" class="ticker-item"><i class="fas fa-leaf"></i><span>Jardinería empresarial: cómo mantener áreas verdes todo el año</span></a><a href="/blog/desinfeccion-profunda-oficinas/" class="ticker-item"><i class="fas fa-spray-can-sparkles"></i><span>Desinfección profunda de oficinas: cuándo y cómo hacerla</span></a><a href="/blog/checklist-mantenimiento-empresas/" class="ticker-item"><i class="fas fa-clipboard-check"></i><span>Checklist definitivo de mantenimiento preventivo para empresas</span></a><a href="/blog/limpieza-pisos-industriales/" class="ticker-item"><i class="fas fa-broom"></i><span>Limpieza de pisos industriales: métodos y cuidados esenciales</span></a><a href="/blog/como-elegir-empresa-limpieza/" class="ticker-item"><i class="fas fa-magnifying-glass"></i><span>Cómo elegir una empresa de limpieza para tu negocio: guía práctica</span></a><a href="/blog/limpieza-vidrios-fachadas/" class="ticker-item"><i class="fas fa-building"></i><span>Limpieza de vidrios en altura: fachadas y edificios corporativos</span></a><a href="/blog/mantenimiento-instalaciones-electricas/" class="ticker-item"><i class="fas fa-bolt"></i><span>Mantenimiento de instalaciones eléctricas en empresas: guía esencial</span></a><a href="/blog/control-plagas-oficinas/" class="ticker-item"><i class="fas fa-bug"></i><span>Plagas en oficinas: cómo prevenirlas y eliminarlas definitivamente</span></a><a href="/blog/limpieza-cocinas-industriales/" class="ticker-item"><i class="fas fa-utensils"></i><span>Limpieza de cocinas industriales y comedores empresariales</span></a><a href="/blog/impermeabilizacion-techos-empresas/" class="ticker-item"><i class="fas fa-house-chimney"></i><span>Impermeabilización de techos y azoteas en empresas: cuándo y cómo</span></a><a href="/blog/senalizacion-seguridad-nom/" class="ticker-item"><i class="fas fa-triangle-exclamation"></i><span>Señalización de seguridad en espacios de trabajo: NOM y obligaciones</span></a><a href="/blog/reducir-costos-mantenimiento/" class="ticker-item"><i class="fas fa-chart-line"></i><span>Cómo reducir costos de mantenimiento sin sacrificar calidad</span></a><a href="/blog/mantenimiento-parques-industriales/" class="ticker-item"><i class="fas fa-industry"></i><span>Limpieza y mantenimiento para parques industriales: guía completa</span></a>
+    <a href="/blog/limpieza-alfombras-oficina/" class="ticker-item"><i class="fas fa-couch"></i><span>Cómo limpiar alfombras de oficina profesionalmente</span></a><a href="/blog/mantenimiento-aire-acondicionado/" class="ticker-item"><i class="fas fa-snowflake"></i><span>Mantenimiento de aire acondicionado: cada cuánto y por qué importa</span></a><a href="/blog/camaras-seguridad-empresas/" class="ticker-item"><i class="fas fa-video"></i><span>Cámaras de seguridad para empresas: guía completa 2025</span></a><a href="/blog/limpieza-post-construccion/" class="ticker-item"><i class="fas fa-hard-hat"></i><span>Limpieza post-construcción: qué incluye y cómo cotizarla</span></a><a href="/blog/control-acceso-biometrico/" class="ticker-item"><i class="fas fa-fingerprint"></i><span>Control de acceso biométrico: cómo proteger tu empresa en 2025</span></a><a href="/blog/retardante-fuego-textiles/" class="ticker-item"><i class="fas fa-fire-extinguisher"></i><span>Retardante de fuego en textiles: normativa NOM y beneficios reales</span></a><a href="/blog/limpieza-cortinas-tapiceria/" class="ticker-item"><i class="fas fa-couch"></i><span>Limpieza de cortinas y tapicería en espacios comerciales</span></a><a href="/blog/jardineria-empresarial/" class="ticker-item"><i class="fas fa-leaf"></i><span>Jardinería empresarial: cómo mantener áreas verdes todo el año</span></a><a href="/blog/desinfeccion-profunda-oficinas/" class="ticker-item"><i class="fas fa-spray-can-sparkles"></i><span>Desinfección profunda de oficinas: cuándo y cómo hacerla</span></a><a href="/blog/checklist-mantenimiento-empresas/" class="ticker-item"><i class="fas fa-clipboard-check"></i><span>Checklist definitivo de mantenimiento preventivo para empresas</span></a><a href="/blog/limpieza-pisos-industriales/" class="ticker-item"><i class="fas fa-broom"></i><span>Limpieza de pisos industriales: métodos y cuidados esenciales</span></a><a href="/blog/como-elegir-empresa-limpieza/" class="ticker-item"><i class="fas fa-magnifying-glass"></i><span>Cómo elegir una empresa de limpieza para tu negocio: guía práctica</span></a><a href="/blog/limpieza-vidrios-fachadas/" class="ticker-item"><i class="fas fa-building"></i><span>Limpieza de vidrios en altura: fachadas y edificios corporativos</span></a><a href="/blog/mantenimiento-instalaciones-electricas/" class="ticker-item"><i class="fas fa-bolt"></i><span>Mantenimiento de instalaciones eléctricas en empresas: guía esencial</span></a><a href="/blog/control-plagas-oficinas/" class="ticker-item"><i class="fas fa-bug"></i><span>Plagas en oficinas: cómo prevenirlas y eliminarlas definitivamente</span></a><a href="/blog/limpieza-cocinas-industriales/" class="ticker-item"><i class="fas fa-utensils"></i><span>Limpieza de cocinas industriales y comedores empresariales</span></a><a href="/blog/impermeabilizacion-techos-empresas/" class="ticker-item"><i class="fas fa-house-chimney"></i><span>Impermeabilización de techos y azoteas en empresas: cuándo y cómo</span></a><a href="/blog/senalizacion-seguridad-nom/" class="ticker-item"><i class="fas fa-triangle-exclamation"></i><span>Señalización de seguridad en espacios de trabajo: NOM y obligaciones</span></a><a href="/blog/reducir-costos-mantenimiento/" class="ticker-item"><i class="fas fa-chart-line"></i><span>Cómo reducir costos de mantenimiento sin sacrificar calidad</span></a><a href="/blog/mantenimiento-parques-industriales/" class="ticker-item"><i class="fas fa-industry"></i><span>Limpieza y mantenimiento para parques industriales: guía completa</span></a>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters-wrap">
+  <div class="filters-label"><i class="fas fa-filter"></i> &nbsp;Filtrar por categoría</div>
+  <div class="filters-row" id="filterRow">
+    <button class="filter-btn active" data-cat="all">Todos <span class="filter-count">20</span></button><button class="filter-btn" data-cat="Aire Acondicionado">Aire Acondicionado <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Control de Acceso">Control de Acceso <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Control de Plagas">Control de Plagas <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Cámaras y Seguridad">Cámaras y Seguridad <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Gestión Empresarial">Gestión Empresarial <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Guía de Contratación">Guía de Contratación <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Industrial">Industrial <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Jardinería y Paisajismo">Jardinería y Paisajismo <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Limpieza Profunda">Limpieza Profunda <span class="filter-count">4</span></button><button class="filter-btn" data-cat="Limpieza de Fachadas">Limpieza de Fachadas <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Limpieza de Textiles">Limpieza de Textiles <span class="filter-count">2</span></button><button class="filter-btn" data-cat="Mantenimiento Preventivo">Mantenimiento Preventivo <span class="filter-count">3</span></button><button class="filter-btn" data-cat="Retardante Incendios">Retardante Incendios <span class="filter-count">1</span></button><button class="filter-btn" data-cat="Seguridad Laboral">Seguridad Laboral <span class="filter-count">1</span></button>
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="blog-section">
+  <div class="no-results" id="noResults">
+    <i class="fas fa-search"></i>
+    No hay artículos en esta categoría aún.
+  </div>
+  <div class="blog-grid" id="blogGrid">
+    <a href="/blog/limpieza-alfombras-oficina/" class="blog-card fade-up" data-cat="Limpieza de Textiles">
+      <div class="blog-card-header wi1">
+        <i class="fas fa-couch"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Limpieza de Textiles</span>
+        <h2>Cómo limpiar alfombras de oficina profesionalmente</h2>
+        <p class="blog-excerpt">Guía completa sobre limpieza de alfombras de oficina. Métodos profesionales, frecuencias recomendadas y señales de que necesitas el servicio ya.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>4 junio 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>5 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/mantenimiento-aire-acondicionado/" class="blog-card fade-up" data-cat="Aire Acondicionado">
+      <div class="blog-card-header wi5">
+        <i class="fas fa-snowflake"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Aire Acondicionado</span>
+        <h2>Mantenimiento de aire acondicionado: cada cuánto y por qué importa</h2>
+        <p class="blog-excerpt">Todo sobre el mantenimiento de aire acondicionado para empresas. Frecuencias, señales de falla, costos y por qué el mantenimiento preventivo ahorra dinero.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>20 mayo 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/camaras-seguridad-empresas/" class="blog-card fade-up" data-cat="Cámaras y Seguridad">
+      <div class="blog-card-header wi4">
+        <i class="fas fa-video"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Cámaras y Seguridad</span>
+        <h2>Cámaras de seguridad para empresas: guía completa 2025</h2>
+        <p class="blog-excerpt">Guía definitiva para instalar cámaras de seguridad en tu empresa. Tipos de cámaras, costos reales, mejores marcas y cómo elegir el sistema correcto en México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>10 mayo 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>7 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/limpieza-post-construccion/" class="blog-card fade-up" data-cat="Limpieza Profunda">
+      <div class="blog-card-header wi6">
+        <i class="fas fa-hard-hat"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Limpieza Profunda</span>
+        <h2>Limpieza post-construcción: qué incluye y cómo cotizarla</h2>
+        <p class="blog-excerpt">Todo sobre la limpieza post-construcción y post-remodelación. Fases del proceso, materiales especializados, tiempos y por qué es clave contratar profesionales.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>28 abril 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/control-acceso-biometrico/" class="blog-card fade-up" data-cat="Control de Acceso">
+      <div class="blog-card-header wi4">
+        <i class="fas fa-fingerprint"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Control de Acceso</span>
+        <h2>Control de acceso biométrico: cómo proteger tu empresa en 2025</h2>
+        <p class="blog-excerpt">Guía completa sobre sistemas de control de acceso biométrico para empresas. Tipos, costos, beneficios y cómo implementarlo correctamente en México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>15 abril 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>7 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/retardante-fuego-textiles/" class="blog-card fade-up" data-cat="Retardante Incendios">
+      <div class="blog-card-header wi2">
+        <i class="fas fa-fire-extinguisher"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Retardante Incendios</span>
+        <h2>Retardante de fuego en textiles: normativa NOM y beneficios reales</h2>
+        <p class="blog-excerpt">Todo sobre la aplicación de retardante de fuego en textiles. Normas NOM en México, qué materiales se tratan, proceso de aplicación y quién lo necesita legalmente.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>5 abril 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/limpieza-cortinas-tapiceria/" class="blog-card fade-up" data-cat="Limpieza de Textiles">
+      <div class="blog-card-header wi1">
+        <i class="fas fa-couch"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Limpieza de Textiles</span>
+        <h2>Limpieza de cortinas y tapicería en espacios comerciales</h2>
+        <p class="blog-excerpt">Guía profesional para la limpieza de cortinas y tapicería en oficinas. Métodos, frecuencias recomendadas, señales de alarma y beneficios para tu imagen corporativa.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>22 marzo 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>5 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/jardineria-empresarial/" class="blog-card fade-up" data-cat="Jardinería y Paisajismo">
+      <div class="blog-card-header wi3">
+        <i class="fas fa-leaf"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Jardinería y Paisajismo</span>
+        <h2>Jardinería empresarial: cómo mantener áreas verdes todo el año</h2>
+        <p class="blog-excerpt">Servicios de jardinería para empresas en CDMX y área metropolitana. Muros verdes, jardines corporativos y mantenimiento de áreas verdes todo el año.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>10 marzo 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>5 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/desinfeccion-profunda-oficinas/" class="blog-card fade-up" data-cat="Limpieza Profunda">
+      <div class="blog-card-header wi6">
+        <i class="fas fa-spray-can-sparkles"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Limpieza Profunda</span>
+        <h2>Desinfección profunda de oficinas: cuándo y cómo hacerla</h2>
+        <p class="blog-excerpt">Guía completa sobre desinfección profunda de oficinas y espacios comerciales. Protocolos certificados, productos autorizados y frecuencia recomendada para México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>18 febrero 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/checklist-mantenimiento-empresas/" class="blog-card fade-up" data-cat="Mantenimiento Preventivo">
+      <div class="blog-card-header wi7">
+        <i class="fas fa-clipboard-check"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Mantenimiento Preventivo</span>
+        <h2>Checklist definitivo de mantenimiento preventivo para empresas</h2>
+        <p class="blog-excerpt">Descarga el checklist completo de mantenimiento preventivo para empresas. Tareas mensuales, trimestrales y anuales para edificios, oficinas e instalaciones en México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>1 febrero 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>8 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/limpieza-pisos-industriales/" class="blog-card fade-up" data-cat="Limpieza Profunda">
+      <div class="blog-card-header wi6">
+        <i class="fas fa-broom"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Limpieza Profunda</span>
+        <h2>Limpieza de pisos industriales: métodos y cuidados esenciales</h2>
+        <p class="blog-excerpt">Guía completa para la limpieza de pisos industriales, epóxicos y comerciales. Métodos, productos certificados y frecuencias recomendadas para empresas en México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>25 enero 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/como-elegir-empresa-limpieza/" class="blog-card fade-up" data-cat="Guía de Contratación">
+      <div class="blog-card-header wi7">
+        <i class="fas fa-magnifying-glass"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Guía de Contratación</span>
+        <h2>Cómo elegir una empresa de limpieza para tu negocio: guía práctica</h2>
+        <p class="blog-excerpt">5 criterios clave para contratar la empresa de limpieza correcta para tu negocio. Qué preguntar, qué evitar y cómo evaluar propuestas en México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>18 enero 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>7 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/limpieza-vidrios-fachadas/" class="blog-card fade-up" data-cat="Limpieza de Fachadas">
+      <div class="blog-card-header wi4">
+        <i class="fas fa-building"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Limpieza de Fachadas</span>
+        <h2>Limpieza de vidrios en altura: fachadas y edificios corporativos</h2>
+        <p class="blog-excerpt">Todo sobre la limpieza profesional de vidrios en altura para fachadas y edificios corporativos. Técnicas, equipos de seguridad y frecuencia recomendada en México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>12 enero 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/mantenimiento-instalaciones-electricas/" class="blog-card fade-up" data-cat="Mantenimiento Preventivo">
+      <div class="blog-card-header wi6">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Mantenimiento Preventivo</span>
+        <h2>Mantenimiento de instalaciones eléctricas en empresas: guía esencial</h2>
+        <p class="blog-excerpt">Guía sobre mantenimiento eléctrico preventivo para empresas. Frecuencias, señales de riesgo, normativa NOM en México y por qué no puedes ignorarlo.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>5 enero 2025</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>7 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/control-plagas-oficinas/" class="blog-card fade-up" data-cat="Control de Plagas">
+      <div class="blog-card-header wi2">
+        <i class="fas fa-bug"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Control de Plagas</span>
+        <h2>Plagas en oficinas: cómo prevenirlas y eliminarlas definitivamente</h2>
+        <p class="blog-excerpt">Guía completa para el control de plagas en oficinas y espacios comerciales en México. Tipos de plagas, métodos de prevención y cuándo llamar a los profesionales.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>20 diciembre 2024</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/limpieza-cocinas-industriales/" class="blog-card fade-up" data-cat="Limpieza Profunda">
+      <div class="blog-card-header wi6">
+        <i class="fas fa-utensils"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Limpieza Profunda</span>
+        <h2>Limpieza de cocinas industriales y comedores empresariales</h2>
+        <p class="blog-excerpt">Guía profesional para la limpieza de cocinas industriales y comedores en empresas. Normativas COFEPRIS, frecuencias y métodos certificados para México.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>10 diciembre 2024</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/impermeabilizacion-techos-empresas/" class="blog-card fade-up" data-cat="Mantenimiento Preventivo">
+      <div class="blog-card-header wi6">
+        <i class="fas fa-house-chimney"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Mantenimiento Preventivo</span>
+        <h2>Impermeabilización de techos y azoteas en empresas: cuándo y cómo</h2>
+        <p class="blog-excerpt">Guía completa sobre impermeabilización de techos para empresas en México. Tipos de sistemas, señales de deterioro, temporadas y costos reales.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>1 diciembre 2024</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>6 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/senalizacion-seguridad-nom/" class="blog-card fade-up" data-cat="Seguridad Laboral">
+      <div class="blog-card-header wi2">
+        <i class="fas fa-triangle-exclamation"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Seguridad Laboral</span>
+        <h2>Señalización de seguridad en espacios de trabajo: NOM y obligaciones</h2>
+        <p class="blog-excerpt">Todo sobre la señalización de seguridad obligatoria en empresas según las NOM en México. Colores, tipos de señales, dónde colocarlas y sanciones por incumplimiento.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>20 noviembre 2024</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>5 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/reducir-costos-mantenimiento/" class="blog-card fade-up" data-cat="Gestión Empresarial">
+      <div class="blog-card-header wi3">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Gestión Empresarial</span>
+        <h2>Cómo reducir costos de mantenimiento sin sacrificar calidad</h2>
+        <p class="blog-excerpt">Estrategias probadas para reducir costos de mantenimiento empresarial sin comprometer la calidad ni la seguridad. Guía práctica para gerentes y administradores.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>10 noviembre 2024</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>7 min</span>
+        </div>
+      </div>
+    </a><a href="/blog/mantenimiento-parques-industriales/" class="blog-card fade-up" data-cat="Industrial">
+      <div class="blog-card-header wi7">
+        <i class="fas fa-industry"></i>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-cat">Industrial</span>
+        <h2>Limpieza y mantenimiento para parques industriales: guía completa</h2>
+        <p class="blog-excerpt">Guía especializada en limpieza y mantenimiento de parques industriales en México. Servicios clave, frecuencias, cumplimiento normativo y cómo elegir al proveedor correcto.</p>
+        <div class="blog-card-footer">
+          <span class="blog-date"><i class="fas fa-calendar"></i>1 noviembre 2024</span>
+          <span class="blog-read"><i class="fas fa-clock"></i>8 min</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="background:var(--bg2)">
+  <div class="cta-wrap fade-up">
+    <h2>¿Listo para transformar<br/>tu espacio?</h2>
+    <p>Obtén tu cotización personalizada hoy mismo. Sin costo, sin compromiso.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/525626499648?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20con%20ZR%20Solutions." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a>
+      <a href="tel:+525626499648" class="btn-tel"><i class="fas fa-phone"></i> 56 2649 9648</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="/img/logo.jpg" alt="ZR Solutions"/>
+        <div class="footer-brand">ZR <span>Solutions</span></div>
+      </div>
+      <p class="footer-desc">Limpieza de textiles, retardante contra incendios, jardinería, cámaras, biométricos, A/A y limpieza profunda.<br/>CDMX · Edomex · Puebla · Querétaro.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="/#servicios"><i class="fas fa-chevron-right"></i>Limpieza de Textiles</a></li>
+        <li><a href="/#servicios"><i class="fas fa-chevron-right"></i>Retardante Incendios</a></li>
+        <li><a href="/#servicios"><i class="fas fa-chevron-right"></i>Jardinería y Paisajismo</a></li>
+        <li><a href="/#servicios"><i class="fas fa-chevron-right"></i>Cámaras y Accesos</a></li>
+        <li><a href="/#servicios"><i class="fas fa-chevron-right"></i>Aire Acondicionado</a></li>
+        <li><a href="/#servicios"><i class="fas fa-chevron-right"></i>Limpieza Profunda</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Blog &amp; Recursos</h5>
+      <ul>
+        <li><a href="/blog/limpieza-alfombras-oficina/"><i class="fas fa-chevron-right"></i>Limpieza de Alfombras</a></li>
+        <li><a href="/blog/mantenimiento-aire-acondicionado/"><i class="fas fa-chevron-right"></i>Mantenimiento de AC</a></li>
+        <li><a href="/blog/camaras-seguridad-empresas/"><i class="fas fa-chevron-right"></i>Cámaras de Seguridad</a></li>
+        <li><a href="/blog/checklist-mantenimiento-empresas/"><i class="fas fa-chevron-right"></i>Checklist Mantenimiento</a></li>
+        <li><a href="https://wa.me/525626499648" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
+        <li><a href="tel:+525626499648"><i class="fas fa-phone"></i>56 2649 9648</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="footer-hr"/>
+  <div class="footer-bottom">
+    <span>© 2025 ZR Solutions · Todos los derechos reservados</span>
+    <span>Hecho con ♥ para empresas que exigen excelencia</span>
+  </div>
+</footer>
+<div id="wafab">
+  <div id="wamenu">
+    <div class="wa-head"><strong><i class="fab fa-whatsapp"></i>&nbsp; ZR Solutions</strong><p>Selecciona el servicio a cotizar:</p></div>
+    <a class="wa-opt" href="https://wa.me/525626499648?text=Hola,%20me%20gustaría%20cotizar%20Limpieza%20de%20Textiles." target="_blank"><div class="wa-ico wi1"><i class="fas fa-couch"></i></div><div class="wa-txt"><strong>Limpieza de Textiles</strong><span>Alfombras, sillones, tapicería →</span></div></a>
+    <a class="wa-opt" href="https://wa.me/525626499648?text=Hola,%20me%20gustaría%20cotizar%20Retardante%20contra%20Incendios." target="_blank"><div class="wa-ico wi2"><i class="fas fa-fire-extinguisher"></i></div><div class="wa-txt"><strong>Retardante contra Incendios</strong><span>Protección certificada →</span></div></a>
+    <a class="wa-opt" href="https://wa.me/525626499648?text=Hola,%20me%20gustaría%20cotizar%20Jardinería." target="_blank"><div class="wa-ico wi3"><i class="fas fa-leaf"></i></div><div class="wa-txt"><strong>Jardinería y Paisajismo</strong><span>Jardines y muros verdes →</span></div></a>
+    <a class="wa-opt" href="https://wa.me/525626499648?text=Hola,%20me%20gustaría%20cotizar%20Cámaras%20y%20Control%20de%20Acceso." target="_blank"><div class="wa-ico wi4"><i class="fas fa-video"></i></div><div class="wa-txt"><strong>Cámaras y Accesos</strong><span>Seguridad electrónica →</span></div></a>
+    <a class="wa-opt" href="https://wa.me/525626499648?text=Hola,%20me%20gustaría%20cotizar%20Aire%20Acondicionado." target="_blank"><div class="wa-ico wi5"><i class="fas fa-snowflake"></i></div><div class="wa-txt"><strong>Instalación y Mtto. A/A</strong><span>Climatización profesional →</span></div></a>
+    <a class="wa-opt" href="https://wa.me/525626499648?text=Hola,%20me%20gustaría%20cotizar%20Limpieza%20Profunda." target="_blank"><div class="wa-ico wi6"><i class="fas fa-broom"></i></div><div class="wa-txt"><strong>Limpieza Profunda</strong><span>Vidrios, pisos, oficinas →</span></div></a>
+  </div>
+  <button id="wabtn" onclick="toggleWA()" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></button>
+</div>
+<script>
+  function toggleTheme(){const h=document.documentElement,b=document.getElementById('themeBtn');if(h.getAttribute('data-theme')==='dark'){h.setAttribute('data-theme','light');b.innerHTML='<i class="fas fa-moon"></i>'}else{h.setAttribute('data-theme','dark');b.innerHTML='<i class="fas fa-sun"></i>'}}
+  function toggleMobile(){document.getElementById('mobileNav').classList.toggle('open')}
+  function closeMobile(){document.getElementById('mobileNav').classList.remove('open')}
+  document.addEventListener('click',e=>{const n=document.getElementById('mobileNav'),h=document.querySelector('.btn-hamburger');if(n&&h&&!n.contains(e.target)&&!h.contains(e.target))n.classList.remove('open')});
+  let waOpen=false;
+  function toggleWA(){waOpen=!waOpen;document.getElementById('wamenu').classList.toggle('open',waOpen)}
+  document.addEventListener('click',e=>{if(!document.getElementById('wafab').contains(e.target)&&waOpen){document.getElementById('wamenu').classList.remove('open');waOpen=false}});
+  const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});
+  document.querySelectorAll('.fade-up').forEach(el=>fadeObs.observe(el));
+  window.addEventListener('scroll',()=>{const n=document.getElementById('navbar');n.classList.toggle('scrolled',window.scrollY>50)});
+</script>
+<script>
+// ─── FILTER LOGIC ───────────────────────────────────────────────
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.blog-card');
+const noResults = document.getElementById('noResults');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const cat = btn.dataset.cat;
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    let visible = 0;
+    cards.forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+    // Re-trigger fade-up for newly visible cards
+    document.querySelectorAll('.blog-card:not(.hidden)').forEach(el => {
+      el.classList.remove('visible');
+      setTimeout(() => el.classList.add('visible'), 50);
+    });
+  });
+});
+</script>
+</body>
+</html>
